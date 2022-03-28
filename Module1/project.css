@@ -1,12 +1,22 @@
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 header{
     display: flex;
     justify-content: space-between;
-    margin-top: 1rem;
+    margin-top: 0.8rem;
     margin-left: 1.5rem;
    
 }
+
+h1{
+    font-weight: 100;
+    font-size: 1.7rem;
+}
 nav{
     width:30vw;
+    margin-top: 0.7rem;
+    margin-right: 3.5rem;
 }
 ul{
     display: flex;
@@ -16,4 +26,11 @@ ul{
 
 li{
     list-style: none;
+    font-size: 1.2rem;
+} 
+
+section>img{
+    position: relative;
+    left: 1.5vw;
+    width: 95vw;
 }
