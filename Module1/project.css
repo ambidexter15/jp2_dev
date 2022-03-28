@@ -1,0 +1,19 @@
+header{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    margin-left: 1.5rem;
+   
+}
+nav{
+    width:30vw;
+}
+ul{
+    display: flex;
+    justify-content: space-evenly;
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
