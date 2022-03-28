@@ -34,3 +34,40 @@ section>img{
     left: 1.5vw;
     width: 95vw;
 }
+
+article{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    margin-left: 1.5rem;
+}
+
+article>img{
+    size: 1px;
+    
+}
+
+div{
+    text-align: center;
+    margin: 2rem;
+}
+
+h3{
+    font-weight: 100;
+}
+p{
+    font-size: 1.1rem;
+}
+
+footer{
+    background-color: black;
+    color: white;
+    text-align: center;
+      
+}
+
+footer>h3{
+    padding: 1rem;
+}
+
+
