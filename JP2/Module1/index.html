@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello World!</title>
+
+    <link rel ="stylesheet" href="style.css">
+
+<style>
+    div{
+        font-family: cursive;
+    }
+
+    th{
+        font-family: fantasy;
+    }
+
+    /* class */
+    .Makered{
+        color: red;
+
+    }
+
+    .xyz{
+        font-family: cursive;
+    }
+    
+    #textchange{
+        font-family: cursive;
+        background-color: aqua;
+    }
+
+    #colorchange{
+        background-color: cadetblue;
+        color: blueviolet;
+    }
+   
+   /* .Makered.xyz
+   {
+       font-size: xx-large;
+   } */
+
+   .Makered, .xyz
+   {
+       font-size: xx-small;
+   }
+
+   h2,h4,button{
+       background-color: green;
+   }
+
+   input[value="LastName"]
+   {
+       background-color: deeppink;
+   }
+
+   div>p>span{
+    background-color: rgb(165, 78, 78);
+   }
+
+   div p span{
+       background-color: crimson;
+   }
+
+   button{
+       padding:2rem ;
+       margin:4rem;
+       border: solid;
+       
+   }
+</style>
+</head>
+<body>
+    <!-- headings -->
+    <h1 style="padding-left: 100px;">Heading 1</h1>
+    <h2>Heading 2</h2>
+    <h3>Heading 3</h3>
+    <h4>Heading 4</h4>
+    <h5>Heading 5</h5>
+    <h6>Heading 6</h6>
+
+    <!-- Paragraph -->
+    <!-- class selector -->
+    
+    <p class="Makered xyz"> Para 1 Lorem ipsum dolor sit, amet consectetur minima quis veritatis cupiditate enim, totam neque.</p>
+     <!-- br tag is a self closing tag -->
+    <p class="Makered"> Para 2 Lorem ipsum adipisicing elit.illum obcaecati accusantium quae doloribus sapiente!</p>
+    <p class="xyz"> Para 3 hfefeiowh fbua feoiw lwaj bejb sfsjbf awceygv dwnkjjfndhkj ffjbwfk bfjeak bdsdfsjj dsfasjbkf</p>
+
+    <!-- id selector -->
+     
+    <p id="textchange"> Lorem ipsum dolor sit, amet consectetur minima quis veritatis cupiditate enim, totam neque.</p>
+     <!-- br tag is a self closing tag -->
+    <p class="Makered" id="colorchange"> Lorem ipsum adipisicing elit.illum obcaecati accusantium quae doloribus sapiente!</p>
+    <p> hfefeiowh fbua feoiw lwaj bejb sfsjbf awceygv dwnkjjfndhkj ffjbwfk bfjeak bdsdfsjj dsfasjbkf</p>
+     
+    <!-- anchor -->
+    <a href = "https://pepcoding.com/" target = "_blank"> To go to pepcoding's site click here  </a>
+
+    <!-- image -->
+    <img src = "pep.png " alt = "Pepcoding image">
+    <img src = "image\pep2.jpg " alt = "Pep image">
+
+    <!-- container -->
+    <div style="background-color: cornflowerblue;">
+        <h1>Hey I am new container</h1>
+        <p style="background-color:crimson;"> Lorem ipsum dolor sit, <strong>bfekjw sfhuS  fvugb saagugb </strong>amet consectetur adipisicing elit. <br>Dicta ab eius, ad amet nulla delectus neque illum corporis, <br>eveniet nisi earum repudiandae aut numquam saepe tenetur omnis, animi velit eaque? </p>
+    </div>
+
+    <!-- list -->
+    <!-- Ordered list -->
+    <ol>
+        <li style ="color: aqua; font-size: 10pt;">I am instruction 1</li>
+        <li style="color: red; font-size: 20pt;">I am instruction 2</li>
+        <li>I am instruction 3</li>
+        <div>
+            <li>I am instruction 4</li> 
+            </div>
+        
+        <li>I am instruction 5</li>
+    </ol>
+
+    <ul>
+        <li>I am instruction 1</li>
+        <li>I am instruction 2</li>
+        <li>I am instruction 3</li>
+        <li>I am instruction 4</li>
+        <li>I am instruction 5</li>
+    </ul>
+
+    <!-- table tag -->
+    <table style="border: 5pt; color: brown; background-color: blueviolet;">
+        <thead style="background-color: aquamarine;">
+            <tr>
+                <th>Title1</th>
+                <th>Title2</th>
+                <th>Title3</th>
+            </tr>
+        </thead>
+
+        <tbody style="background-color: burlywood;">
+             <tr>
+                 <td>Cell 1</td>
+                 <td>Cell 2</td>
+                 <td>Cell 3</td>
+             </tr>
+             <tr>
+                <td>Cell 4</td>
+                <td>Cell 5</td>
+                <td>Cell 6</td>
+             </tr>
+             <tr>
+                <td>Cell 7</td>
+                <td>Cell 8</td>
+                <td>Cell 9</td>
+             </tr>
+        </tbody>
+    </table>
+
+    <form>
+        <input type="text" value="FirstName">
+        <input type="text" value="LastName">
+        <input type="email" value="Email">
+        <input type="date" value ="Enter date"><br>
+        <button>submit</button>
+
+    </form>
+
+    <span style="background-color: aqua";>Hello I am a span</span>
+  
+    <!-- Children -->
+    <div> 
+        <p> 
+            <span> Children 
+            </span>
+        </p>
+    </div>
+<!-- Descendent -->
+    <div> 
+        <span>
+            <p>
+                <span> Descendent</span>
+               </p>
+        </span>
+    </div>
+
+    
+</body>
+</html>
