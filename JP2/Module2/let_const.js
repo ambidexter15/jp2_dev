@@ -17,7 +17,21 @@
 // 1. redeclaration not allowed
 // 2. reassignment not allowed
 
-const c =20;
-console.log(c);
-// c =20;
-console.log(c);
+// const c =20;
+// console.log(c);
+// // c =20;
+// console.log(c);
+
+var num1 = 10;
+let num2 = 10;
+
+console.log("num1", num1, "num2", num2);
+
+{
+    var num1 = 20;
+    let num2 = 20;
+    console.log("num1", num1, "num2", num2);
+
+}
+
+console.log("num1", num1, "num2", num2);
