@@ -36,13 +36,32 @@ let capAmerica = {
 
 }
 
-// console.log(capAmerica);
-console.log(capAmerica.address.State);
-console.log(capAmerica.friends[2]);
-console.log(capAmerica.fn());
+// // console.log(capAmerica);
+// console.log(capAmerica.address.State);
+// console.log(capAmerica.friends[2]);
+// console.log(capAmerica.fn());
 
-console.log(capAmerica["address"]["State"]);
+// console.log(capAmerica["address"]["State"]);
 // console.log(capAmerica[friends[2]]);
+
+
+
+console.log("with dot notation: " , capAmerica.firstName);
+console.log(" with square bracket: ", capAmerica["firstName"]);
+
+let first =  'secondName';
+console.log("with dot notation: " , capAmerica.firstName);
+console.log(" with square bracket: ", capAmerica[first]);
+console.log("with dot notation: " , capAmerica.first);
+
+capAmerica.hobby = ["singing","dancing",];
+console.log(capAmerica);
+
+delete capAmerica.hobby;
+console.log(capAmerica);
+
+
+
 
 
 
