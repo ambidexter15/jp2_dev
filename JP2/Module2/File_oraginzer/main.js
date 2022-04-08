@@ -1,9 +1,10 @@
 let fs = require("fs");
 let path = require("path");
 
-// srcfolder path ->  C:\Users\user\Desktop\JP2\Module2\File_oraginzer\src
+// srcfolder path ->  C:\Users\user\Desktop\JP2\Module2\File_oraginzer\src\
 
 let srcFolder = process.argv.slice(2)[0];
+let extFolderPath = path.join(srcFolder,'others');
 // console.log(srcPath);
 
 let extension = {
@@ -17,7 +18,35 @@ let extension = {
 
 function checkFolder(extName, srcFolder)
 {
+    for(let key in extension)
+    {
+        let categoryArr = extension[key];
+        //check for the length of array 
+        if(categoryArr.includes(extName)){
+
+             extFolderPath = path.join(srcFolder,key);
+            break;
+        }
+    }
+
+    return fs.existsSync(extFolderPath);
+
    
+}
+
+
+function createFolder(){
+    fs.mkdirSync(extFolderPath);
+}
+
+function moveFile(fileName, srcFolder){
+
+    let srcFile = path.join(srcFolder,fileName);
+    let destFile = path.join(extFolderPath,fileName);
+    //copy files from source to destination 
+    fs.copyFileSync(srcFile,destFile);
+    fs.unlinkSync(srcFile);
+
 }
 
 function organizeFolder(srcFolder){
@@ -35,13 +64,18 @@ function organizeFolder(srcFolder){
         if(extensionFolder==true)
         {
             //move the file
+             moveFile(content[i],srcFolder);
         }
 
         else{
             //create a folder
             //move the file
-        }
 
+            createFolder();
+            moveFile(content[i],srcFolder);
+        }
+       
+        extFolderPath = path.join(srcFolder,'others');
 
          
 
