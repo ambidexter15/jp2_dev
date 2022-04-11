@@ -14,63 +14,85 @@
     </style>
 </head>
 <body>
-    <h1 id ="h1_class">I am main heading</h1>
+    <!-- <h1 id ="h1_class">I am main heading</h1>
     <div class ="first_div">I am div 1</div>
     <div>I am div 2</div>
     <div>I ma div 3</div>
     <div>I am div 4</div>
-    <div>I am div 5</div>
+    <div>I am div 5</div> -->
+    <button>Click here</button>
 </body>
 
 <script>
 //   console.log("hello world");
-    let h1Elem = document.querySelector("h1");
-    console.log(h1Elem);
-    let h1Attr = h1Elem.getAttribute("id");
-    console.log("h1's id is:", h1Attr)
+    // let h1Elem = document.querySelector("h1");
+    // console.log(h1Elem);
+    // let h1Attr = h1Elem.getAttribute("id");
+    // console.log("h1's id is:", h1Attr)
 
-    let divElem = document.querySelector("div");
-    console.log(divElem);
+    // let divElem = document.querySelector("div");
+    // console.log(divElem);
 
-    //get attribute 
+    // //get attribute 
 
-    let attr = divElem.getAttribute("class")
-    console.log("class name " , attr);
+    // let attr = divElem.getAttribute("class")
+    // console.log("class name " , attr);
 
 
-    let divElemAll = document.querySelectorAll("div");
-    console.log(divElemAll);
-    let new_elem = document.createElement("button");
-    console.log(new_elem);
-    h1Elem.appendChild(new_elem);
-    new_elem.innerHTML = "I am a button";  
-    //set attributes 
-    let setAtrr = new_elem.setAttribute("class", "button-class")
+    // let divElemAll = document.querySelectorAll("div");
+    // console.log(divElemAll);
+    // let new_elem = document.createElement("button");
+    // console.log(new_elem);
+    // h1Elem.appendChild(new_elem);
+    // new_elem.innerHTML = "I am a button";  
+    // //set attributes 
+    // let setAtrr = new_elem.setAttribute("class", "button-class")
 
 
     
-    // add h2 heading in the body
-    let h2Elem = document.createElement("h2");
-    h2Elem.innerHTML = "I am a sub-heading h2"
-    let bodyElem = document.querySelector("body")
-    bodyElem.appendChild(h2Elem);
-    // add new para as child of h2 
-    let pElem = document.createElement("p")
-    h2Elem.appendChild(pElem)
-    pElem.innerHTML = "I am paragraph"
-    // add new div as child of h2 
-    let h2child = document.createElement("h2");
-    h2Elem.appendChild(h2child)
-    h2child.innerHTML ="I am sub-heading inside a sub-heading"
+    // // add h2 heading in the body
+    // let h2Elem = document.createElement("h2");
+    // h2Elem.innerHTML = "I am a sub-heading h2"
+    // let bodyElem = document.querySelector("body")
+    // bodyElem.appendChild(h2Elem);
+    // // add new para as child of h2 
+    // let pElem = document.createElement("p")
+    // h2Elem.appendChild(pElem)
+    // pElem.innerHTML = "I am paragraph"
+    // // add new div as child of h2 
+    // let h2child = document.createElement("h2");
+    // h2Elem.appendChild(h2child)
+    // h2child.innerHTML ="I am sub-heading inside a sub-heading"
 
 
-    //styling with script 
-    h2Elem.style.backgroundColor="crimson"
-    new_elem.style.margin="2rem"
+    // //styling with script 
+    // h2Elem.style.backgroundColor="crimson"
+    // new_elem.style.margin="2rem"
 
    
-    //getAttribute 
+    // //getAttribute 
 
+    let btn = document.querySelector("button");
+    btn.addEventListener("click", function(){  //click 
+       // console.log("Hello");
+         //new div create which says button was clicked 
+         let new_div = document.createElement("div");
+         document.body.appendChild(new_div);
+         new_div.innerHTML="Button was clicked"
+          // give this div a class named as orange
+        new_div.setAttribute("class", "orange")
+        new_div.style.color="orange";
+        new_div.style.backgroundColor="blue";        
+        //background color - blue; content color - orange 
+                              
+
+    })
+
+
+    // document.addEventListener("keypress", function(e){
+    //     console.log(e);
+    //     console.log(e.key)
+    // })
 
 
 </script>
