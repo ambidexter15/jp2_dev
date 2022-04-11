@@ -5,13 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <!-- <style>
-
-    </style> -->
+    <style>
+       .button-class{
+           display: flex;
+           justify-content: space-around;
+           background-color: blue;
+       }
+    </style>
 </head>
 <body>
-    <h1>I am main heading</h1>
-    <div>I am div 1</div>
+    <h1 id ="h1_class">I am main heading</h1>
+    <div class ="first_div">I am div 1</div>
     <div>I am div 2</div>
     <div>I ma div 3</div>
     <div>I am div 4</div>
@@ -22,18 +26,51 @@
 //   console.log("hello world");
     let h1Elem = document.querySelector("h1");
     console.log(h1Elem);
+    let h1Attr = h1Elem.getAttribute("id");
+    console.log("h1's id is:", h1Attr)
+
     let divElem = document.querySelector("div");
     console.log(divElem);
+
+    //get attribute 
+
+    let attr = divElem.getAttribute("class")
+    console.log("class name " , attr);
+
+
     let divElemAll = document.querySelectorAll("div");
     console.log(divElemAll);
     let new_elem = document.createElement("button");
     console.log(new_elem);
     h1Elem.appendChild(new_elem);
-    new_elem.innerHTML = "I am a button";
+    new_elem.innerHTML = "I am a button";  
+    //set attributes 
+    let setAtrr = new_elem.setAttribute("class", "button-class")
 
+
+    
     // add h2 heading in the body
+    let h2Elem = document.createElement("h2");
+    h2Elem.innerHTML = "I am a sub-heading h2"
+    let bodyElem = document.querySelector("body")
+    bodyElem.appendChild(h2Elem);
     // add new para as child of h2 
+    let pElem = document.createElement("p")
+    h2Elem.appendChild(pElem)
+    pElem.innerHTML = "I am paragraph"
     // add new div as child of h2 
+    let h2child = document.createElement("h2");
+    h2Elem.appendChild(h2child)
+    h2child.innerHTML ="I am sub-heading inside a sub-heading"
+
+
+    //styling with script 
+    h2Elem.style.backgroundColor="crimson"
+    new_elem.style.margin="2rem"
+
+   
+    //getAttribute 
+
 
 
 </script>
