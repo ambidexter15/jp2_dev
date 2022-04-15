@@ -23,6 +23,22 @@
     </ul>
     <script>
       //insert here 
+      let liElem = document.querySelectorAll("li");
+      console.log(liElem);
+
+      //element before which we have to insert required element
+      let insertLi = liElem[6];
+
+      //creating the required element
+      let newLi = document.createElement("li")
+      newLi.innerHTML = "7"
+
+      //insertion part 
+      let ulTag = document.querySelector("ul")
+      ulTag.insertBefore(newLi,insertLi)
+
+      //insert before 
+
       
     </script>
   </body>
