@@ -57,7 +57,7 @@
       <option value="action">Action</option>
       <option value="romance">Romance</option>
       <option value="comedy">Comedy</option>
-    </select>
+   </select> 
     <div class="movies">
       <h3 class="heading">Example-1</h3>
       <p class="price" data-category="action">Rs. 100</p>
@@ -100,6 +100,35 @@
     </div>
     <script>
       // Q Make the filter work
+      let selectTag = document.querySelector("select");
+      selectTag.addEventListener("change", function(e){
+        let filterVal = selectTag.value;
+        console.log(filterVal)
+        let allMovies = document.querySelectorAll(".price")
+        console.log(allMovies);
+        if(filterVal=="none"){
+          for(let i=0; i<allMovies.length; i++ ){
+            let parentDiv = allMovies[i].parentElement;
+            parentDiv.style.display="block"
+          }
+        }
+
+        else {
+          for(let i=0; i<allMovies.length; i++ ){
+            if(filterVal==allMovies[i].getAttribute("data-category")){
+              allMovies[i].parentElement.style.display="block"
+            }
+
+            else{
+              allMovies[i].parentElement.style.display="none"
+            }
+                      
+          }
+        
+        }
+
+
+      })
      
     </script>
   </body>
