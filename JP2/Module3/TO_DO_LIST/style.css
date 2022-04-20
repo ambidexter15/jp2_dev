@@ -71,3 +71,22 @@ span{
 .button span{
     font-size: xx-large;
 }
+
+.taskToDo{
+    position: absolute;
+    top: 18rem;
+    box-shadow: 0px 0px 0.5rem 0px #219F94;
+
+}
+
+.taskToDo >input {
+    height: 8rem;
+    width: 29.2rem;
+    background: lightgray;
+    border: none;
+    outline: none;
+    font-size: large;
+    text-align: center;
+    
+
+}
