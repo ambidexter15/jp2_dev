@@ -9,6 +9,23 @@ addBtn.addEventListener("click", function(){
     divToAdd.setAttribute("class", "taskToDo");
     divToAdd.innerHTML = `<input type="text" placeholder="ENTER TASK TO ADD">`;
     body.appendChild(divToAdd);
+    
+    divToAdd.addEventListener("keypress" ,function(e){
+        if(e.key =='Enter'){
+            if(e.target.value.length==0){
+                addBtn.click();
+                return;
+            }
+            let divEle = document.createElement("div")
+            divEle.setAttribute("class", "taskone");
+            divEle.innerHTML=`<span class="material-icons"> done </span>
+                              <p>${e.target.value}</p>
+                              <span class="material-icons"> delete </span>`
+            let parentDiv = document.querySelector(".taskList");
+            parentDiv.appendChild(divEle);
+            addBtn.click();
+        }
+    })
     isBtnPressed=true;
 
     }
