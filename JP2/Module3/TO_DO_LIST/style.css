@@ -23,7 +23,7 @@ body{
     justify-content: space-around;
     width: 100%;
     background-color: teal;
-    color: white;
+    color: rgb(213, 211, 211);
     border-top-left-radius: 1.5rem;
     border-top-right-radius: 1.5rem;
 }
@@ -90,4 +90,8 @@ span{
     text-align: center;
     
 
+}
+
+.active{
+    color: white;
 }
