@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "json-as-xlsx": "^2.4.1",
     "puppeteer": "^13.6.0"
   }
 }

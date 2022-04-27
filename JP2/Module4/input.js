@@ -1,5 +1,8 @@
 const puppeteer = require('puppeteer');
+let fs = require("fs");
 const pin = process.argv[2];
+let xlsx = require("json-as-xlsx");
+
 
 (async () => {
     const browser = await puppeteer.launch({headless:false, 
@@ -63,14 +66,51 @@ const pin = process.argv[2];
            
           }
 
+
          }
 
          
          return a;
        })
-  
+       
+        let AllVaccinationDetails =  JSON.stringify(arr); 
+        fs.writeFileSync("ScheduleofVaccination.json", AllVaccinationDetails);
+
        console.log(arr)
        browser.close();
+
+       let data = [
+        {
+          sheet: "Vaccination Details",
+
+          // "Date": " Sat, 30 Apr ",
+          // "Name": "DGD Molarband PHC",
+          // "Address": "MOLARBAND Badarpur, South East Delhi, Delhi, 110044",
+          // "Vaccine": "COVISHIELDFree",
+          // "Age": "18 & Above",
+          // "Dose": "#1",
+          // "slot": "8 Slots
+          columns: [
+            { label: "Date", value: "Date" }, 
+            { label: "Name", value: "Name" }, 
+            { label: "Address", value: "Address"}, 
+            { label: "Vaccine", value: "Vaccine" }, 
+            { label: "Age", value: "Age" }, 
+            { label: "Dose", value: "Dose"}, 
+            { label: "slot", value: "slot"}
+          ],
+          content: arr
+        },
+     
+      ]
+      
+      let settings = {
+        fileName: "VaccinationSheet", // Name of the resulting spreadsheet
+        extraLength: 8, // A bigger number means that columns will be wider
+        writeOptions: {}, // Style options from https://github.com/SheetJS/sheetjs#writing-options
+      }
+      
+      xlsx(data, settings) // Will download the excel file
 
 
    
