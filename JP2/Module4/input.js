@@ -76,7 +76,7 @@ let xlsx = require("json-as-xlsx");
         let AllVaccinationDetails =  JSON.stringify(arr); 
         fs.writeFileSync("ScheduleofVaccination.json", AllVaccinationDetails);
 
-       console.log(arr)
+      //  console.log(arr)
        browser.close();
 
        let data = [
@@ -110,7 +110,8 @@ let xlsx = require("json-as-xlsx");
         writeOptions: {}, // Style options from https://github.com/SheetJS/sheetjs#writing-options
       }
       
-      xlsx(data, settings) // Will download the excel file
+      xlsx(data, settings) 
+      console.log(AllVaccinationDetails)// Will download the excel file
 
 
    
