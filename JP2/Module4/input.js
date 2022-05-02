@@ -1,6 +1,7 @@
 const puppeteer = require('puppeteer');
 let fs = require("fs");
 const pin = process.argv[2];
+const age = process.argv[3];
 let xlsx = require("json-as-xlsx");
 
 
@@ -32,6 +33,26 @@ let xlsx = require("json-as-xlsx");
       //     searchBtn.click();
       //     return;
       // })
+
+      await page.waitForTimeout(5000);
+      await page.evaluate(function(age){
+        let allAges = document.querySelectorAll(".form-check .accessibility-plugin-ac")
+        if(age >= 12 && age <= 17)
+        {
+          allAges[0].click();
+        }
+
+         else if(age >= 15 && age <= 17)
+        {
+          allAges[1].click();
+        }
+
+        else if(age >= 18){
+          allAges[2].click();
+        }
+      }, age)
+
+     
        await page.waitForSelector(".item.active .availability-date");
        await page.waitForSelector(".col-sm-12.col-md-12.col-lg-12.cvc-list-item.ng-star-inserted");
         await page.waitForTimeout(5000);
@@ -105,7 +126,7 @@ let xlsx = require("json-as-xlsx");
       ]
       
       let settings = {
-        fileName: "VaccinationSheet", // Name of the resulting spreadsheet
+        fileName: "VaccinationSchedule", // Name of the resulting spreadsheet
         extraLength: 8, // A bigger number means that columns will be wider
         writeOptions: {}, // Style options from https://github.com/SheetJS/sheetjs#writing-options
       }

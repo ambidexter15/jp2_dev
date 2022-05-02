@@ -34,8 +34,8 @@
 <body>
     <div class ="container">
     <input class="pin" type="text" placeholder="Enter the Pin Code">
-    <input type="text" placeholder="Enter your age">
-    <input type="email" placeholder="Enter you email ID">
+    <input class="age" type="text" placeholder="Enter your age">
+    <input class="email" type="email" placeholder="Enter you email ID">
     <button>Submit</button>
 </div>
 </body>
@@ -44,8 +44,10 @@
     let body = document.querySelector("body")
     button.addEventListener("click", async function(){
         let pinCode = document.querySelector(".pin").value;
+        let age = document.querySelector(".age").value
+        let email = document.querySelector(".email").value
         console.log(pinCode);
-        const response = await axios.get(`/details/${pinCode}`);
+        const response = await axios.get(`/details/${pinCode}/${age}/${email}`);
         console.log(response.data);
 
         let arr = response.data;
